@@ -6,9 +6,8 @@ var bodyParser = require("body-parser");
 const morgan = require("morgan");
 const helmet = require("helmet");
 const dotenv = require("dotenv");
-const authorRoute = require("./routes/author");
-const bookRoute = require("./routes/book");
 const authRoute = require("./routes/auth");
+const userRoute = require("./routes/user");
 
 dotenv.config();
 //CONNECT DATABASE
@@ -22,9 +21,10 @@ app.use(cors());
 app.use(morgan("common"));
 
 //ROUTES
-app.use("/v1/author", authorRoute);
-app.use("/v1/book", bookRoute);
+
 app.use("/api/auth", authRoute);
+app.use("/api/user", userRoute);
+
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server is running...");
