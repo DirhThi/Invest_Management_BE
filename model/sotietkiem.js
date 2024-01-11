@@ -22,6 +22,10 @@ const sotietkiemSchema = new mongoose.Schema(
             type: Number,
             required: true,
         },
+        thoihan: {
+            type: Number,
+            required: true,
+        },
         batdau: {
             type: Date,
             required: true,
@@ -39,7 +43,7 @@ const sotietkiemSchema = new mongoose.Schema(
               ref: "lsgiaodich",
             },
           ],
-          dslichsudaoan: [
+          dslichsudaohan: [
             {
               type: mongoose.Schema.Types.ObjectId,
               ref: "lsgiaodich",
@@ -53,6 +57,6 @@ const sotietkiemSchema = new mongoose.Schema(
 );
 
 
-let Sotienkiem = mongoose.model('sotietkiem', khoancodinhSchema);
+let Sotienkiem = mongoose.model('sotietkiem', sotietkiemSchema);
 
 module.exports = Sotienkiem;

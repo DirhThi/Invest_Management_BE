@@ -19,7 +19,8 @@ const khoancodinhController = {
 //get /khoancodinh/getall
     getAllKhoancodinh: async (req, res,next) => {
         try {
-          const AllKhoancodinh = await KhoanCoDinh.find();
+          const { user} = req.body;
+          const AllKhoancodinh = await KhoanCoDinh.find({"user" : user});
           res.status(200).json(AllKhoancodinh);
         } catch (err) {
             next(err);
