@@ -16,7 +16,7 @@ const khoancodinhSchema = new mongoose.Schema(
             required: true,
         },
         batdau: {
-            type: Date,
+            type: String,
             required: true,
         },
         sotien: {
@@ -24,7 +24,7 @@ const khoancodinhSchema = new mongoose.Schema(
             required: true,
         },
         chuki: {
-            type: String,
+            type: Number,
             required: true,
         },
         thoihan: {
@@ -32,7 +32,7 @@ const khoancodinhSchema = new mongoose.Schema(
             required: true,
         },
         ketthuc: {
-            type: Date,
+            type: String,
             required: true,
         },
         dslichsugd: [
@@ -43,7 +43,6 @@ const khoancodinhSchema = new mongoose.Schema(
           ],
         trangthai: {
             type: String,
-            required: true,
         },
        
     },

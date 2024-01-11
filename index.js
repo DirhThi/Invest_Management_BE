@@ -8,6 +8,8 @@ const helmet = require("helmet");
 const dotenv = require("dotenv");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/user");
+const khoancodinhRoute = require("./routes/khoancodinh");
+const lsgiaodichRoute = require("./routes/lsgiaodich");
 
 dotenv.config();
 //CONNECT DATABASE
@@ -24,6 +26,9 @@ app.use(morgan("common"));
 
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
+app.use("/api/khoancodinh",khoancodinhRoute);
+app.use("/api/lsgd",lsgiaodichRoute);
+
 
 
 app.listen(process.env.PORT || 5000, () => {

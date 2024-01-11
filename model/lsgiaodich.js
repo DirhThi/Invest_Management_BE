@@ -13,6 +13,7 @@ const lsgiaodichSchema = new mongoose.Schema(
             type: Date,
             required: true,
         },
+        
     },
 );
 

@@ -23,7 +23,7 @@ const quyhuiSchema = new mongoose.Schema(
             required: true,
         },
         chuki: {
-            type: String,
+            type: Number,
             required: true,
         },
         dslichsuhui: [
