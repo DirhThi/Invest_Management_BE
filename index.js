@@ -11,6 +11,12 @@ const userRoute = require("./routes/user");
 const khoancodinhRoute = require("./routes/khoancodinh");
 const lsgiaodichRoute = require("./routes/lsgiaodich");
 const sotietkiemRoute = require("./routes/sotietkiem");
+const quyvayRoute = require("./routes/quyvay");
+const quyhuiRoute = require("./routes/quyhui");
+const lshuiRoute = require("./routes/lshui");
+
+
+
 
 dotenv.config();
 //CONNECT DATABASE
@@ -30,6 +36,12 @@ app.use("/api/user", userRoute);
 app.use("/api/khoancodinh",khoancodinhRoute);
 app.use("/api/lsgd",lsgiaodichRoute);
 app.use("/api/sotietkiem",sotietkiemRoute);
+app.use("/api/quyvay",quyvayRoute);
+app.use("/api/quyhui",quyhuiRoute);
+app.use("/api/lshui",lshuiRoute);
+
+
+
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server is running...");
